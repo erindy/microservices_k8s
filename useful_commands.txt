@@ -1,0 +1,12 @@
+
+// create a docker network
+docker network create todo-net
+
+
+// create a docker container and attach it to a todo-net network
+docker run --network todo-net --name todo-postgres -p 5433:5432 -e  POSTGRES_USER=todo -e POSTGRES_PASSWORD=todo1234 -e POSTGRES_DB=todo -d postgres:11.2
+
+
+// create a redis container
+docker run --network todo-net --name todo-redis -d -p 6379:6379 redis:5.0.3
+
