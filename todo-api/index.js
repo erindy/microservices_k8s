@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+// const cors = require('cors'); // Import the cors middleware
 const { Pool } = require('pg');
 const redis = require('redis');
 var elasticsearch = require('elasticsearch');
@@ -8,6 +9,8 @@ const envProps = require('./env_props');
 // Initializing the Express Framework /////////////////////////////////////////////////////
 const app = express();
 const port = 3000;
+
+// app.use(cors());
 app.use(bodyParser.json());
 app.use(
     bodyParser.urlencoded({

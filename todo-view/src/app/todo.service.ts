@@ -4,7 +4,11 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { Todo } from './todo';
 
 // const BASE_PATH = '/local_server/api/v1';
-const BASE_PATH = '/api/v1';
+// const BASE_PATH = '/api/v1';
+// const BASE_PATH = 'http://todo-api:3000/api/v1';
+// const BASE_PATH = 'http://localhost:3000/api/v1';
+const BASE_PATH = 'http://localhost:8080/api/v1';
+
 
 @Injectable()
 export class TodoService {
